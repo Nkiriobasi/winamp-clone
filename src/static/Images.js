@@ -1,4 +1,4 @@
-import WinampLogo from '../assets/Winamp-logo-icon.png'
+import WinampLogo from '../assets/Winamp-logo-icon.svg'
 
 
 

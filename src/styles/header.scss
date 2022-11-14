@@ -1,0 +1,225 @@
+@use "./variables" as v;
+
+.header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    width: 100%;
+    -webkit-transition: background 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    transition: background 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+
+    @media (max-width: v.$breakpoint-desktop){
+        display: none;
+    }
+
+    .headerContainer {
+        width: calc(100vw - 10%);
+        max-width: 100%;
+        margin: 0 auto;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        padding: 50px 0;
+        -webkit-transition: -webkit-transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        transition: -webkit-transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94), -webkit-transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+
+        .headerLogo {
+            opacity: 1;
+            width: 150px;
+            height: 100px;
+
+            .logoLink {
+                width: 100%;
+                height: 100%;
+                display: inline-block;
+
+                .logo {
+                    width: 100%;
+                    height: 100%;
+                    font-size: 300px;
+                }
+            }
+        }
+
+
+        .headerNav {
+            -webkit-box-flex: 1;
+            -ms-flex: 1 auto;
+            flex: 1 auto;
+        }
+
+        .menu {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            justify-content: center;
+
+            .menuItem, .subMenuItem {
+                cursor: pointer;
+
+                .menuItemLink {
+                    color: v.$white-color;
+                    transition: color 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+                    font-size: 1.125rem;
+                    display: inline-block;
+
+                    &:hover {
+                        color: v.$red-color;
+                    }
+                }
+            }
+
+            .menuItem:not(:first-child) {
+                margin-left: 50px;
+            }
+
+            .menuItemHasChildren {
+                position: relative;
+
+
+                .subMenu {
+                    width: -webkit-max-content;
+                    width: -moz-max-content;
+                    width: max-content;
+                    padding: 30px;
+                    background: v.$white-color;
+                    border-radius: 12px;
+
+    
+                    @media (min-width: v.$breakpoint-desktop) {
+                        position: absolute;
+                        top: 70%;
+                        left: 50%;
+                        text-align: center;
+                        margin: 20px 0 0 2.5%;
+                        pointer-events: auto;
+                        -webkit-box-shadow: 0 10.4px 103.9px 0 rgba(25,21,58,0.1);
+                        box-shadow: 0 10.4px 103.9px 0 rgba(25,21,58,0.1);
+                        opacity: 0;
+                        -webkit-transform: translateY(5px) translateX(-50%);
+                        transform: translateY(5px) translateX(-50%);
+                        transition: opacity 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94),transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94),-webkit-transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+                    }
+
+                    .subMenuItem{
+                        padding: 0.5rem 0;
+                    }
+
+                    .subMenuItemLink{
+                        font-size: 1rem;
+                        -webkit-transition: color 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+                        transition: color 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+                        color: #19153a;
+
+                        &:hover {
+                            color: v.$red-color;
+                        }
+                    }
+                
+                }
+            }
+        }
+
+        .menuItemHasChildren:hover .subMenu {
+
+            @media (min-width: v.$breakpoint-desktop) {
+                opacity: 1;
+                pointer-events: auto;
+                -webkit-transform: translateY(0) translateX(-50%);
+                transform: translateY(0) translateX(-50%);
+            }
+        }
+
+        
+        .headerCtas{
+            -webkit-transition: opacity 0.2s 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94),-webkit-transform 0.2s 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            transition: opacity 0.2s 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94),-webkit-transform 0.2s 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+
+
+            @media (min-width: v.$breakpoint-desktop) {
+                opacity: 1;
+                -webkit-transform: translateY(0);
+                transform: translateY(0);
+            }
+
+
+            .menu {
+                width: 21.875rem;
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                -webkit-box-align: center;
+                -ms-flex-align: center;
+                align-items: center;
+                -webkit-box-pack: end;
+                -ms-flex-pack: end;
+                justify-content: flex-end;
+
+                .menuItem:last-child{
+                    margin-left: 10px;
+
+                    .disabledLink {
+                        pointer-events: none !important;
+                        background: rgba(255,255,255,0.2);
+                        color: v.$white-color;
+                        border: 1px solid rgba(25,21,58,0);
+                        overflow: visible;
+                    }
+                }
+
+                .btn{
+                    position: relative;
+                    z-index: 1;
+                    display: inline-block;
+                    border-width: 1px;
+                    border-style: solid;
+                    border-radius: 12px;
+                    background: transparent;
+                    padding: 16px 33px;
+                    font-size: 1.0625rem;
+                }
+
+
+                .btnPrimaryLink {
+                    border-color: v.$red-color;
+                    color: v.$white-color;
+                    background: v.$red-color;
+    
+                    &:hover {
+                        border-color: rgba(25,21,58,0.2);
+                        color: #f93821;
+                        background: rgba(255,255,255,0.5);
+                    }
+                }
+            }
+        }
+        
+
+        .burger {
+
+            @media (min-width: v.$breakpoint-desktop) {
+                display: none;
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
