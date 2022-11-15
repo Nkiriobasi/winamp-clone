@@ -48,4 +48,87 @@
             background-position: center;
         }
     }
+
+
+    // Hero Styles
+    .hero {
+        position: relative;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: end;
+        -ms-flex-align: end;
+        align-items: flex-end;
+        color: v.$white-color;
+        height: auto;
+        padding-top: 200px;
+        padding-bottom: 60px;
+
+        .heroContainer {
+            display: flex;
+            flex-direction: column;
+            -webkit-box-align: start;
+            -ms-flex-align: start;
+            align-items: flex-start;
+            max-width: 100%;
+            position: relative;
+            z-index: 1;
+            max-width: 1092px;
+            margin: 0 auto;
+
+            @media (max-width: 1164px) {
+                padding: 0 1.875rem;
+            }
+
+
+            @media (min-width: v.$breakpoint-desktop) {
+                flex-direction: row;
+                -webkit-box-align: end;
+                -ms-flex-align: end;
+                align-items: flex-end;
+            }
+
+
+            .titleWrapper {
+                width: 100%;
+                margin-bottom: 20px;
+
+                @media (min-width: v.$breakpoint-desktop) {
+                    width: 50%;
+                    margin-bottom: 0;
+                }
+
+                .headlineTitle {
+                    font-size: 50px;
+                    font-family: 'Montserrat', sans-serif;
+                    font-weight: 500;
+                    line-height: 1;
+                    letter-spacing: -0.04em;
+
+                    @media (min-width: v.$breakpoint-desktop) {
+                        font-size: 64px;
+                    }
+
+                    @media (max-width: v.$breakpoint-mobile) {
+                        font-size: 36px;
+                    }
+                }
+            }
+
+
+            .textWrapper {
+                width: 80%;
+                font-size: 0.875rem;
+
+                @media (min-width: v.$breakpoint-desktop) {
+                    width: 50%;
+                }
+
+                @media (min-width: v.$breakpoint-mobile) {
+                    font-size: 1rem;
+                }
+            }
+
+        }
+    }
 }

@@ -19,7 +19,7 @@ const Header = () => {
                         <li className='menuItem menuItemHasChildren'>
                             <Link to='/player/' className='menuItemLink'>Player</Link>
 
-                            <ul className='subMenu'>
+                            {/* <ul className='subMenu'>
                                 <li className="subMenuItem">
                                     <Link to='/player/' className="subMenuItemLink">Overview</Link>
                                 </li>
@@ -29,7 +29,7 @@ const Header = () => {
                                 <li className="subMenuItem">
                                     <Link to='/player/community' className="subMenuItemLink">Community</Link> 
                                 </li>
-                            </ul>
+                            </ul> */}
                         </li>
 
 
@@ -41,7 +41,7 @@ const Header = () => {
                         <li className='menuItem menuItemHasChildren'>
                             <Link to='/creators/' className='menuItemLink'>Creators</Link>
 
-                            <ul className='subMenu'>
+                            {/* <ul className='subMenu'>
                                 <li className="subMenuItem">
                                     <Link to='/creators/' className="subMenuItemLink">Overview</Link>
                                 </li>
@@ -51,14 +51,14 @@ const Header = () => {
                                 <li className="subMenuItem">
                                     <Link to='/creators/pricing' className="subMenuItemLink">Pricing</Link>
                                 </li>
-                            </ul>
+                            </ul> */}
                         </li>
 
                         
                         <li className='menuItem menuItemHasChildren'>  
                             <Link to='/about/' className='menuItemLink'>More</Link>
 
-                            <ul className='subMenu'>
+                            {/* <ul className='subMenu'>
                                 <li className="subMenuItem">
                                     <Link to='/about/' className="subMenuItemLink">About Us</Link>
                                 </li>
@@ -74,7 +74,7 @@ const Header = () => {
                                 <li className="subMenuItem">
                                     <Link to='/about/tribune/' className="subMenuItemLink">Tribune</Link>
                                 </li>
-                            </ul>
+                            </ul> */}
                         </li>
                     </ul>
                 </nav>
