@@ -24,7 +24,7 @@ const Home = () => {
           </section>
           
           <section className="hero">
-            <div className="heroContainer">
+            <div className="heroContainer container">
               <span className='titleWrapper'>
                 <h1 className="headlineTitle">Set the tone!</h1>
               </span>
@@ -36,6 +36,8 @@ const Home = () => {
               </span>
             </div>
           </section>
+          
+          <section className="discover"></section>
         </main>
     </React.Fragment>
   )
