@@ -7,6 +7,7 @@ const Home = () => {
   return (
     <React.Fragment>
         <Header />
+        <main className="main"></main>
     </React.Fragment>
   )
 }
