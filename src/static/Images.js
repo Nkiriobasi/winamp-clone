@@ -10,6 +10,7 @@ import MusicAllyLogo from '../assets/music-ally-logo.jpeg'
 import MusictechOgLogo from '../assets/musictech-og-logo.png'
 import Player1 from '../assets/player-1.png'
 import Unnamed from '../assets/unnamed.jpeg'
+import GradientDarkMp4 from '../assets/gradient-dark.mp4'
 
 
 
@@ -21,6 +22,7 @@ export default {
     EmbeddedImage,
     Fanzone,
     GradientDark,
+    GradientDarkMp4,
     Hypebot,
     Lama,
     MusicAllyLogo,
