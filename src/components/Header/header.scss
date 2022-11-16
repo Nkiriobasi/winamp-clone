@@ -1,4 +1,4 @@
-@use "./variables" as v;
+@use "../../styles/variables" as v;
 
 .header {
     position: absolute;
@@ -172,31 +172,6 @@
                         color: v.$white-color;
                         border: 1px solid rgba(25,21,58,0);
                         overflow: visible;
-                    }
-                }
-
-                .btn{
-                    position: relative;
-                    z-index: 1;
-                    display: inline-block;
-                    border-width: 1px;
-                    border-style: solid;
-                    border-radius: 12px;
-                    background: transparent;
-                    padding: 16px 33px;
-                    font-size: 1.0625rem;
-                }
-
-
-                .btnPrimaryLink {
-                    border-color: v.$red-color;
-                    color: v.$white-color;
-                    background: v.$red-color;
-    
-                    &:hover {
-                        border-color: rgba(25,21,58,0.2);
-                        color: #f93821;
-                        background: rgba(255,255,255,0.5);
                     }
                 }
             }

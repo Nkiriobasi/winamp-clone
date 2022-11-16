@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from "react-router-dom";
-import { Images } from '../static'
-import '../styles/header.scss'
+import { Images } from '../../static'
+import './header.scss'
 
 
 const Header = () => {

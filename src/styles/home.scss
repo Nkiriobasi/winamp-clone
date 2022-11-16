@@ -130,4 +130,41 @@
 
         }
     }
+
+
+    // Discover Styles
+    .discover {
+        min-height: 0;
+        padding-bottom: 60px;
+        max-width: 100%;
+        position: relative;
+
+
+        @media (min-width: v.$breakpoint-tablet) {
+            &::before {
+                height: calc(185 / 1440 * 100vw);
+                content: '';
+                display: block;
+                position: absolute;
+                top: auto;
+                bottom: 0;
+                left: calc(50% - 1px);
+                z-index: 0;
+                background: #fff;
+                width: calc(100vw + 2px);
+                -webkit-transform: translateX(-50%);
+                transform: translateX(-50%);
+            }
+        }
+
+        .container {
+            display: flex;
+            flex-direction: row;
+            gap: 1.2rem;
+
+            @media (max-width: v.$breakpoint-desktop) {
+                flex-direction: column;
+            }
+        }
+    }
 }
