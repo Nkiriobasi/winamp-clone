@@ -106,12 +106,32 @@ const Home = () => {
                     </ul>
                   </div>
 
-                  <Link to='' className='btn btnPrimaryLink'>
+                  <Link to='/fanzone' className='btn btnPrimaryLink'>
                     <span>Discover the Fanzone</span>
                   </Link>
                 </div>
 
                 <Link to='/fanzone' className='globalLink'></Link>
+              </div>
+            </div>
+          </section>
+
+          <section className="media">
+            <div className="mediaContainer">
+              <h2 className="mediaTitle">The History of Winamp</h2>
+              <div className="mediaText">
+                <p>
+                  Winamp is a legend with a heritage going all the 
+                  way back to 1997, and still maintaining a vibrant 
+                  community of millions of active users worldwide 
+                  today.<br /> Check out the story of Winamp and what’s coming next!
+                </p>
+              </div>
+
+              <div className="mediaButtons">
+                <Link to='/about' className='btn btnPrimaryLink'>
+                  <span>More about Winamp</span>
+                </Link>
               </div>
             </div>
           </section>

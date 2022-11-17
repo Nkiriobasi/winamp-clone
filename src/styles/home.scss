@@ -289,4 +289,38 @@
             }
         }
     }
+
+
+    // Media Styles
+    .media {
+        padding-top: 40px;
+        padding-bottom: 120px;
+        min-height: 0;
+        max-width: 100%;
+        position: inherit;
+        z-index: 1;
+        background: v.$white-color;
+        color: #19153a;
+
+        @media (min-width: v.$breakpoint-tablet) {
+            max-height: 100vh;
+        }
+
+        .mediaContainer {
+            max-width: 700px;
+            text-align: center;
+            margin: 0 auto;
+            position: initial;
+
+            .mediaTitle {
+                font-size: 3.125rem;
+                margin-bottom: 2.5rem;
+            }
+
+            .mediaText {
+                color: #6B7280;
+                margin-bottom: 2.5rem;
+            }
+        }
+    }
 }
