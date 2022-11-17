@@ -8,6 +8,8 @@
     -webkit-transition: opacity 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     transition: opacity 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 
+    
+    // videoFixed Styles
     .videoFixed {
         position: fixed;
         top: 0;
@@ -105,11 +107,11 @@
                     letter-spacing: -0.04em;
 
                     @media (min-width: v.$breakpoint-desktop) {
-                        font-size: 64px;
+                        font-size: 4rem;
                     }
 
                     @media (max-width: v.$breakpoint-mobile) {
-                        font-size: 36px;
+                        font-size: 2.25rem;
                     }
                 }
             }
@@ -142,15 +144,15 @@
 
         @media (min-width: v.$breakpoint-tablet) {
             &::before {
-                height: calc(185 / 1440 * 100vw);
                 content: '';
                 display: block;
                 position: absolute;
                 top: auto;
                 bottom: 0;
                 left: calc(50% - 1px);
+                height: calc(185 / 1440 * 100vw);
                 z-index: 0;
-                background: #fff;
+                background: v.$white-color;
                 width: calc(100vw + 2px);
                 -webkit-transform: translateX(-50%);
                 transform: translateX(-50%);
@@ -164,6 +166,126 @@
 
             @media (max-width: v.$breakpoint-desktop) {
                 flex-direction: column;
+            }
+        }
+    }
+
+    // DiscoverFull Styles
+    .discoverFull {
+        -webkit-box-align: start;
+        -ms-flex-align: start;
+        align-items: flex-start;
+
+        min-height: 0;
+        padding-bottom: 60px;
+        max-width: 100%;
+        position: relative;
+
+
+        &::before {
+            content: '';
+            display: block;
+            position: absolute;
+            top: -2px;
+            left: calc(50% - 1px);
+            z-index: 0;
+            background: v.$white-color;
+            width: calc(100vw + 2px);
+            height: calc(100% + 4px);
+            -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+        }
+
+
+        .discoverItem {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: reverse;
+            opacity: 1;
+            -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+            background: transparent;
+            padding: 40px 40px 40px 40px;
+            will-change: transform, opacity;
+
+            position: relative;
+            z-index: 1;
+            border-radius: 12px;
+            overflow: hidden;
+            background: v.$white-color;
+            -webkit-box-shadow: 0 10px 60px 0 rgba(25,21,58,0.05);
+            box-shadow: 0 10px 60px 0 rgba(25,21,58,0.05);
+
+
+            @media (min-width: v.$breakpoint-desktop) {
+                -webkit-box-orient: horizontal;
+                -ms-flex-direction: row-reverse;
+                flex-direction: row-reverse;
+                padding: 40px 0 40px 40px;
+            }
+
+
+            .discoverMedia {
+                width: 100%;
+                position: relative;
+
+                @media (min-width: v.$breakpoint-desktop) {
+                    width: 50%;
+                }
+
+                img {
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    -o-object-position: center left;
+                    object-position: center left;
+                }
+            }
+
+            .discoverHeadline {
+                color: #19153a;
+                position: relative;
+                z-index: 2;
+                width: 100%;
+                height: 100%;
+                pointer-events: none;
+
+                @media (min-width: v.$breakpoint-desktop) {
+                    width: 50%;
+                    padding-right: 40px;
+                }
+                
+                &::before {
+                    content: '';
+                    display: block;
+                    width: 96px;
+                    height: 96px;
+                    background-repeat: no-repeat;
+                    background-size: contain;
+                    margin-bottom: 30px;
+                    background-image: url('../assets/embedded-image.svg');
+                }
+
+
+                .discoverTitle, .discoverText {
+                    margin-bottom: 24px;
+                }
+
+                .discoverText {
+                    width: 100%;
+                    max-width: 700px;
+
+                    ul {
+                        list-style-type: disc;
+
+                        li {
+                            margin-left: 5%;
+                            list-style: initial;
+                        }
+                    }
+                }
             }
         }
     }

@@ -2,6 +2,7 @@ import React from 'react'
 import '../../styles/home.scss'
 import { Header, DiscoverCard } from '../../components'
 import { Images } from '../../static'
+import { Link } from 'react-router-dom'
 
 
 
@@ -66,6 +67,52 @@ const Home = () => {
                 btnText= 'Discover the Creators'
                 cardLink= './creators'
               />
+            </div>
+          </section>
+
+          <section className="discoverFull">
+            <div className="container">
+              <div className="discoverItem">
+                <div className="discoverMedia">
+                  <figure className="discoverMediaPicture">
+                    <img src={Images.Fanzone} alt="fanzone homepage" className="object__fit__cover" />
+                  </figure>
+                </div>
+
+                <div className="discoverHeadline">
+                  <h2 className="discoverTitle">Fanzone: a place where artists meets listeners</h2>
+                  <div className="discoverText">
+                    <p>
+                      <strong>Fanzone for Listeners</strong>
+                    </p>
+
+                    <ul>
+                      <li>Keep your favorite music, radio stations and podcasts in one place</li>
+                      <li>Support your favorite artists in Winamp and get exclusive content</li>
+                      <li>Interact directly with those who inspire you</li>
+                    </ul>
+
+                    <p>
+                      <strong>
+                        <br />
+                        Fanzone for Creators
+                      </strong>
+                    </p>
+
+                    <ul>
+                      <li>Discover new ways to generate income from your music</li>
+                      <li>Create more direct engagement with passionate fans</li>
+                      <li>Take your power back and get supported directly by fans</li>
+                    </ul>
+                  </div>
+
+                  <Link to='' className='btn btnPrimaryLink'>
+                    <span>Discover the Fanzone</span>
+                  </Link>
+                </div>
+
+                <Link to='/fanzone' className='globalLink'></Link>
+              </div>
             </div>
           </section>
         </main>
