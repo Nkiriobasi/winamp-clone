@@ -323,4 +323,82 @@
             }
         }
     }
+
+
+    // Scroller Styles
+    .scroller {
+        position: relative;
+        margin-top: 0;
+        padding-bottom: 50px;
+
+        &::before {
+            height: 150%;
+            content: '';
+            display: block;
+            position: absolute;
+            top: -2px;
+            left: calc(50% - 1px);
+            z-index: 0;
+            background: #fff;
+            width: calc(100vw + 2px);
+            height: calc(100% + 4px);
+            -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+        }
+
+        @media (min-width: v.$breakpoint-desktop) {
+            padding-bottom: 7.5rem;
+
+            &::before {
+                height: 200%;
+            }
+        }
+
+
+        .scroller__inner {
+            overflow: hidden;
+
+            .scroller__title {
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                -webkit-box-flex: 1;
+                -ms-flex-positive: 1;
+                flex-grow: 1;
+                font-size: calc(120 / 320 * 100vw);
+                font-weight: 600;
+                line-height: 1.4;
+                white-space: nowrap;
+
+                
+                @media (min-width: v.$breakpoint-desktop) {
+                    font-size: calc(240 / 1440 * 100vw);
+                }
+
+                span {
+                    background: -webkit-gradient(linear, right top, left top, from(#fc4d36), color-stop(#778efd), color-stop(#FC4C35), to(#758BFD));
+                    background: linear-gradient(to left, #fc4d36, #778efd, #FC4C35, #758BFD);
+                      background-clip: border-box;
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: v.$white-color;
+                    color: transparent;
+                    -webkit-text-stroke: 4px transparent;
+
+                    will-change: transform;
+                    display: inline;
+                    -webkit-box-flex: 0;
+                    -ms-flex: 0 0 auto;
+                    flex: 0 0 auto;
+                    padding-left: 2%;
+                    padding-right: 2%;
+
+                    
+                    @media (min-width: 980px) {
+                        -webkit-animation: scroller 30s infinite linear;
+                        animation: scroller 30s infinite linear;
+                    }
+                }
+            }
+        }
+    }
 }

@@ -130,6 +130,15 @@ const Home = () => {
               </div>
             </div>
           </section>
+
+          <section className="scroller">
+            <div className="scroller__inner">
+              <h2 className="scroller__title">
+                <span>What they say about us</span>
+                <span>What they say about us</span>
+              </h2>
+            </div>
+          </section>
         </main>
     </React.Fragment>
   )
