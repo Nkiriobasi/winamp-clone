@@ -8,11 +8,6 @@ import { Link } from 'react-router-dom'
 
 const Home = () => {
 
-  const videoSizing = {
-    width: '1366px',
-    height: '739px'
-  }
-
   const playerText = `The revamped player tailored to blend music from 
                       different sources. Enjoy customized content from 
                       your favorite creators via Fanzone.`
@@ -31,7 +26,7 @@ const Home = () => {
             <video width="1366" muted loop autoPlay>
               <source src={Images.GradientDarkMp4} type="video/mp4" />
             </video>
-            <div className="videoFixedMedia" style={videoSizing}></div>
+            <div className="videoFixedMedia" style={{ width: '1366px', heightt : '739px' }}></div>
           </section>
           
           <section className="hero">
