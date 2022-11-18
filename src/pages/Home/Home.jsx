@@ -1,6 +1,6 @@
 import React from 'react'
 import '../../styles/home.scss'
-import { Header, DiscoverCard } from '../../components'
+import { Header, DiscoverCard, TribunesCard } from '../../components'
 import { Images } from '../../static'
 import { Link } from 'react-router-dom'
 
@@ -16,6 +16,28 @@ const Home = () => {
                       activities, from distribution and monetization to 
                       licensing and loyalty administration.`
 
+  const smartWorldText = `Torniamo a parlare di Winamp, uno dei servizi 
+                        che hanno fatto la storia della multimedialità 
+                        per tantissimi utenti dall’inizio degli anni 2000, 
+                        soprattutto su piattaforma PC.`
+
+  const musicAllytext = `This week, the company opened that up with a signup 
+                        process for 25,000 artists and audio creators.`
+
+  const hypeBotText = `The Winamp revival continues with the addition of a 
+                      new platform to help creators connect with the 83 
+                      million fans that use the music listening platform.`
+
+  const engadgetText = `The creator service makes it more than an MP3 player`
+
+  const musicTechText = `The platform aims to put creators in control of their 
+                        content`
+
+  const musicAlly2Text = `Media player Winamp‘s original heyday may be some 
+                          time in the past, but it remains a going concern – 
+                          80 million people are using the software around the 
+                          world still.
+`
 
   return (
     <React.Fragment>
@@ -112,21 +134,23 @@ const Home = () => {
           </section>
 
           <section className="media">
-            <div className="mediaContainer">
-              <h2 className="mediaTitle">The History of Winamp</h2>
-              <div className="mediaText">
-                <p>
-                  Winamp is a legend with a heritage going all the 
-                  way back to 1997, and still maintaining a vibrant 
-                  community of millions of active users worldwide 
-                  today.<br /> Check out the story of Winamp and what’s coming next!
-                </p>
-              </div>
+            <div className="container">
+              <div className="mediaContainer">
+                <h2 className="mediaTitle">The History of Winamp</h2>
+                <div className="mediaText">
+                  <p>
+                    Winamp is a legend with a heritage going all the 
+                    way back to 1997, and still maintaining a vibrant 
+                    community of millions of active users worldwide 
+                    today.<br /> Check out the story of Winamp and what’s coming next!
+                  </p>
+                </div>
 
-              <div className="mediaButtons">
-                <Link to='/about' className='btn btnPrimaryLink'>
-                  <span>More about Winamp</span>
-                </Link>
+                <div className="mediaButtons">
+                  <Link to='/about' className='btn btnPrimaryLink'>
+                    <span>More about Winamp</span>
+                  </Link>
+                </div>
               </div>
             </div>
           </section>
@@ -137,6 +161,76 @@ const Home = () => {
                 <span>What they say about us</span>
                 <span>What they say about us</span>
               </h2>
+            </div>
+          </section>
+          
+          <section className="tribunes tribunes__scroller">
+            <div className="container">
+              <ol className="tribunes__items">
+                <TribunesCard
+                  src={Images.Download}
+                  alt= 'smartWorld'
+                  dateTime= 'September 13, 2022'
+                  source= 'Smartworld'
+                  title= 'Winamp sta tornando in una veste tutta nuova'
+                  text={smartWorldText} 
+                />
+
+                <TribunesCard
+                  src={Images.MusicAllyLogo}
+                  alt= 'musicAlly'
+                  dateTime= 'September 13, 2022'
+                  source= 'MusicAlly'
+                  title= 'Winamp opens up its new creator tools for 25,000 artists'
+                  text={musicAllytext}
+                />
+              </ol>
+
+              <ol className="tribunes__items">
+                <TribunesCard
+                  src={Images.Hypebot}
+                  alt= 'hypebot'
+                  dateTime= 'September 13, 2022'
+                  source= 'Hypebot'
+                  title= 'Signup NOW for a FREE year of the Winamp For Creators toolkit'
+                  text={hypeBotText}
+                />
+
+                <TribunesCard
+                  src={Images.Unnamed}
+                  alt= 'engadget'
+                  dateTime= 'September 13, 2022'
+                  source= 'Engadget'
+                  title= 'Winamp’s revival includes platforms for musicians and fans'
+                  text={engadgetText} 
+                />
+              </ol>
+
+              <ol className="tribunes__items">
+                <TribunesCard
+                  src={Images.MusictechOgLogo}
+                  alt= 'music tech' 
+                  dateTime= 'September 13, 2022'
+                  source= 'MusicTech'
+                  title= 'Winamp’s revival includes platforms for musicians and fans'
+                  text={musicTechText}
+                />
+
+                <TribunesCard
+                  src={Images.MusicAllyLogo}
+                  alt= 'musicAlly' 
+                  dateTime= 'July 21, 2022'
+                  source= 'MusicAlly'
+                  title= 'Winamp outlines its plans for aggregation, artists and NFTs'
+                  text={musicAlly2Text}
+                />
+              </ol>
+
+              <div className="tribunes__footer">
+                <Link to='/about/tribune' className='btn btnPrimaryLink'>
+                  <span>See more</span>
+                </Link>
+              </div>
             </div>
           </section>
         </main>

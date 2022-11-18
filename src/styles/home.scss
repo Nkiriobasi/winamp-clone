@@ -401,4 +401,83 @@
             }
         }
     }
+
+
+    // Tribunes Styles
+    .tribunes {
+        width: 100%;
+
+        .container {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+        }
+    }
+
+    .tribunes__scroller {
+        padding-bottom: 0;
+        position: relative;
+
+        &::before {
+            content: '';
+            display: block;
+            position: absolute;
+            top: -62px;
+            left: calc(50% - 1px);
+            z-index: 0;
+            background: #fff;
+            width: calc(100vw + 2px);
+            height: calc(100% + 64px);
+            -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+        }
+
+        .tribunes__items {
+            -webkit-transform: translateY(-150px);
+            transform: translateY(-150px);
+
+            @media (min-width: v.$breakpoint-desktop) {
+                width: calc(100% / 3 - 14px);
+                
+
+                &:nth-child(2n+1) {
+                    -webkit-transform: translateY(-200px);
+                    transform: translateY(-200px);
+                }
+
+                &:nth-child(3n+2) {
+                    -webkit-transform: translateY(-50px);
+                    transform: translateY(-50px);
+                }
+            }
+
+            @media (min-width: v.$breakpoint-tablet) {
+                -webkit-transform: translateY(-175px);
+                transform: translateY(-175px);
+
+
+                &:first-child {
+                    margin-right: 10px;
+                }
+
+                &:nth-child(2) {
+                    margin: 0 10px;
+                }
+
+                &:nth-child(3) {
+                    margin-left: 10px;
+                }
+            }
+        }
+
+        .tribunes__footer {
+            -webkit-box-flex: 1;
+            -ms-flex: 1 100%;
+            flex: 1 100%;
+            text-align: center;
+            margin-top: 2rem;
+        }
+    }
 }
