@@ -11,6 +11,7 @@ import MusictechOgLogo from '../assets/musictech-og-logo.png'
 import Player1 from '../assets/player-1.png'
 import Unnamed from '../assets/unnamed.jpeg'
 import GradientDarkMp4 from '../assets/gradient-dark.mp4'
+import footerLogo from '../assets/footer-logo.png'
 
 
 
@@ -28,5 +29,6 @@ export default {
     MusicAllyLogo,
     MusictechOgLogo,
     Player1,
-    Unnamed
+    Unnamed,
+    footerLogo
 }

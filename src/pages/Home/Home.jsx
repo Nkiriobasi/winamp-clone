@@ -1,8 +1,11 @@
 import React from 'react'
 import '../../styles/home.scss'
-import { Header, DiscoverCard, TribunesCard } from '../../components'
+import { Header, DiscoverCard, TribunesCard, FooterMenuTitle, FooterMenuItem } from '../../components'
 import { Images } from '../../static'
 import { Link } from 'react-router-dom'
+import { CgFacebook } from 'react-icons/cg'
+import { AiOutlineInstagram, AiOutlineTwitter } from 'react-icons/ai'
+import { TiSocialLinkedin } from 'react-icons/ti'
 
 
 
@@ -234,6 +237,109 @@ const Home = () => {
             </div>
           </section>
         </main>
+
+        <footer className="footer">
+          <div className='container'>
+            <section className="footer__left">
+              <div className="footer-logo">
+                <Link to='/' className='globalLink'>
+                  <span class="u-visually-hidden">Winamp</span>
+                </Link>
+                <img src={Images.footerLogo} alt="logo" className='object__fit__cover' />
+              </div>
+            </section>
+            
+            <section className="footer__center">
+              <nav className="footer__nav">
+                <div className="footer__nav-items">
+                  <FooterMenuTitle text= 'The player' />
+
+                  <ul className="menu">
+                    <FooterMenuItem text= 'Overview' />
+                    <FooterMenuItem text= 'Community' />
+                    <FooterMenuItem text= 'Download' />
+                    <FooterMenuItem text= 'Fanzone' />
+                  </ul>
+                </div>
+                <div className="footer__nav-items">
+                  <FooterMenuTitle text= 'Creators' />
+
+                  <ul className="menu">
+                    <FooterMenuItem text= 'Overview' />
+                    <FooterMenuItem text= 'Services' />
+                    <FooterMenuItem text= 'Pricing' />
+                    <FooterMenuItem text= 'Fanzone' />
+                  </ul>
+                </div>
+                <div className="footer__nav-items">
+                  <FooterMenuTitle text= 'Company' />
+                  
+                  <ul className="menu">
+                    <FooterMenuItem text= 'About Us' />
+                    <FooterMenuItem text= 'Careers' />
+                    <FooterMenuItem text= 'Foundation' />
+                    <FooterMenuItem text= 'Help Center' />
+                    <FooterMenuItem text= 'NFT Initiative' />
+                    <FooterMenuItem text= 'For Partners' />
+                    <FooterMenuItem text= 'Press Kit' />
+                    <FooterMenuItem text= 'Tribune' />
+                  </ul>
+                </div>
+              </nav>
+            </section>
+            
+            <section className="footer__right">
+              <h2 className="footer__title-big">Set the tone!</h2>
+
+              <div className="footer__ctas">
+                <Link to='/creators' className='btn btnPrimaryLink'>
+                  <span>Creators</span>
+                </Link>
+
+                <Link to='/' className='btn btnBorder'>
+                  <span>Play</span>
+                </Link>
+              </div>
+
+              <div className="footer__socials">
+                <FooterMenuTitle text= 'Follow Us' />
+
+                <ul className="social__items">
+                  <li>
+                    <a href="/#" className='social__item'>
+                      <span className="social-icon">
+                        <CgFacebook />
+                      </span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/#" className='social__item'>
+                      <span className="social-icon">
+                        <AiOutlineInstagram />
+                      </span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/#" className='social__item'>
+                      <span className="social-icon">
+                        <TiSocialLinkedin />
+                      </span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="/#" className='social__item'>
+                      <span className="social-icon">
+                        <AiOutlineTwitter />
+                      </span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </section>
+
+            <section className="footer__bottom"></section>
+          </div>
+        </footer>
     </React.Fragment>
   )
 }

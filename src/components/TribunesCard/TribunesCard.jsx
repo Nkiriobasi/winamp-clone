@@ -1,7 +1,6 @@
 import React from 'react'
 import './TribunesCard.scss'
 import { BsArrowUpRight } from 'react-icons/bs'
-// import { Link } from 'react-router-dom'
 
 
 const TribunesCard = ({ src, alt, dateTime, source, title, text }) => {

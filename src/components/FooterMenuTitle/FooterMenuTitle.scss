@@ -1,0 +1,8 @@
+@use '../../styles/variables' as v;
+
+.footer__title {
+    font-size: 1rem;
+    font-weight: 700;
+    color: v.$red-color;
+    line-height: 1.2;
+}

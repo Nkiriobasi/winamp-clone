@@ -1,0 +1,19 @@
+@use '../../styles/variables' as v;
+
+.menu__item {
+    margin-top: 25px;
+
+    .menu__itemLink {
+        font-size: 1rem;
+        font-weight: 500;
+        color: #19153a;
+        border-bottom: 1px solid rgba(25,21,58,0);
+        -webkit-transition: color 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94),border 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        transition: color 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94),border 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+
+        &:hover {
+            color: v.$red-color;
+            border-bottom: 1px solid v.$red-color;
+        }
+    }
+}
