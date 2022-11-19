@@ -1,4 +1,4 @@
-import WinampLogo from '../assets/Winamp-logo-icon.svg'
+import WinampLogo from '../assets/Winamp-logo.png'
 import Creators from '../assets/creators-1.png'
 import Download from '../assets/download.png'
 import EmbeddedImage from '../assets/embedded-image.svg'

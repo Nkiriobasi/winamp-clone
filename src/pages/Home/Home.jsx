@@ -243,7 +243,7 @@ const Home = () => {
             <section className="footer__left">
               <div className="footer-logo">
                 <Link to='/' className='globalLink'>
-                  <span class="u-visually-hidden">Winamp</span>
+                  <span className="u-visually-hidden">Winamp</span>
                 </Link>
                 <img src={Images.footerLogo} alt="logo" className='object__fit__cover' />
               </div>

@@ -33,6 +33,8 @@
             opacity: 1;
             width: 150px;
             height: 100px;
+            background: v.$white-color;
+            border-radius: 25px 10px 25px 10px;
 
             .logoLink {
                 width: 100%;
@@ -42,7 +44,6 @@
                 .logo {
                     width: 100%;
                     height: 100%;
-                    font-size: 300px;
                 }
             }
         }
@@ -77,6 +78,17 @@
                 }
             }
 
+            .menuItem:hover .subMenu {
+
+                @media (min-width: v.$breakpoint-desktop) {
+                    opacity: 1;
+                    visibility: visible;
+                    pointer-events: auto;
+                    -webkit-transform: translateY(0) translateX(-50%);
+                    transform: translateY(0) translateX(-50%);
+                }
+            }
+
             .menuItem:not(:first-child) {
                 margin-left: 50px;
             }
@@ -99,11 +111,12 @@
                         top: 70%;
                         left: 50%;
                         text-align: center;
-                        margin: 20px 0 0 2.5%;
-                        pointer-events: auto;
+                        margin: 10px 0 0 2.5%;
+                        pointer-events: none;
                         -webkit-box-shadow: 0 10.4px 103.9px 0 rgba(25,21,58,0.1);
                         box-shadow: 0 10.4px 103.9px 0 rgba(25,21,58,0.1);
                         opacity: 0;
+                        visibility: hidden;
                         -webkit-transform: translateY(5px) translateX(-50%);
                         transform: translateY(5px) translateX(-50%);
                         transition: opacity 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94),transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94),-webkit-transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
@@ -128,15 +141,16 @@
             }
         }
 
-        .menuItemHasChildren:hover .subMenu {
+        // .menuItemHasChildren:hover .subMenu {
 
-            @media (min-width: v.$breakpoint-desktop) {
-                opacity: 1;
-                pointer-events: auto;
-                -webkit-transform: translateY(0) translateX(-50%);
-                transform: translateY(0) translateX(-50%);
-            }
-        }
+        //     @media (min-width: v.$breakpoint-desktop) {
+        //         opacity: 1;
+        //         visibility: visible;
+        //         pointer-events: auto;
+        //         -webkit-transform: translateY(0) translateX(-50%);
+        //         transform: translateY(0) translateX(-50%);
+        //     }
+        // }
 
         
         .headerCtas{

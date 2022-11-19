@@ -1,9 +1,10 @@
 import React from 'react'
+import '../../styles/musicPlayer.scss'
 
 
 const MusicPlayer = () => {
   return (
-    <div>MusicPlayer</div>
+    <React.Fragment></React.Fragment>
   )
 }
 

@@ -12,7 +12,7 @@ const TribunesCard = ({ src, alt, dateTime, source, title, text }) => {
 
         <div className="card__content">
             <strong className="card__head">
-                <time className='dates' datetime={dateTime}>{dateTime}</time>
+                <time className='dates' dateTime={dateTime}>{dateTime}</time>
                 <span className="spacer"> - </span>
                 <a href="/#" className="source">{source}</a>
             </strong>
