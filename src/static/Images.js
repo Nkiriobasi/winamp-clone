@@ -1,4 +1,5 @@
 import WinampLogo from '../assets/Winamp-logo.png'
+import WinampRedLogo from '../assets/winamp-red-logo.png'
 import Creators from '../assets/creators-1.png'
 import Download from '../assets/download.png'
 import EmbeddedImage from '../assets/embedded-image.svg'
@@ -18,6 +19,7 @@ import footerLogo from '../assets/footer-logo.png'
 // eslint-disable-next-line import/no-anonymous-default-export
 export default {
     WinampLogo,
+    WinampRedLogo,
     Creators,
     Download,
     EmbeddedImage,
