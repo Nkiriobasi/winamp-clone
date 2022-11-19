@@ -4,7 +4,7 @@ import { Images } from '../../static'
 import { Link } from 'react-router-dom'
 import { TbHome, TbHeadphones } from 'react-icons/tb'
 import { MdOutlineAlbum, MdMusicNote, MdQueueMusic } from 'react-icons/md'
-import { AiOutlineCloudDownload } from 'react-icons/ai'
+import { AiOutlineCloudDownload, AiOutlineSearch } from 'react-icons/ai'
 import { HiPlusCircle } from 'react-icons/hi'
 
 
@@ -80,7 +80,7 @@ const MusicPlayer = () => {
                   <span className="item">Nostalgia</span>
                 </Link>
               </li>
-              
+
               <li>
                 <Link to='/music-player' className="menu__item-link">
                   <span className="icon"><MdQueueMusic /></span>
@@ -91,6 +91,14 @@ const MusicPlayer = () => {
           </div>
         </div>
       </aside>
+
+      <div className='main'>
+
+        <div className="input__container">
+          <input type="text" placeholder="Search" />
+          <AiOutlineSearch className='search__icon' />
+        </div>
+      </div>
     </React.Fragment>
   )
 }
