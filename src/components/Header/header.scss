@@ -141,17 +141,6 @@
             }
         }
 
-        // .menuItemHasChildren:hover .subMenu {
-
-        //     @media (min-width: v.$breakpoint-desktop) {
-        //         opacity: 1;
-        //         visibility: visible;
-        //         pointer-events: auto;
-        //         -webkit-transform: translateY(0) translateX(-50%);
-        //         transform: translateY(0) translateX(-50%);
-        //     }
-        // }
-
         
         .headerCtas{
             -webkit-transition: opacity 0.2s 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94),-webkit-transform 0.2s 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
@@ -180,12 +169,14 @@
                 .menuItem:last-child{
                     margin-left: 10px;
 
-                    .disabledLink {
-                        pointer-events: none !important;
+                    .btnSecondaryLink {
                         background: rgba(255,255,255,0.2);
                         color: v.$white-color;
                         border: 1px solid rgba(25,21,58,0);
-                        overflow: visible;
+
+                        &:hover {
+                            background: rgba(234, 151, 151, 0.2);
+                        }
                     }
                 }
             }
@@ -193,9 +184,10 @@
         
 
         .burger {
+            display: none;
 
             @media (min-width: v.$breakpoint-desktop) {
-                display: none;
+                // display: none;
             }
         }
     }

@@ -92,7 +92,7 @@ const MusicPlayer = () => {
         </div>
       </aside>
 
-      <div className='main'>
+      <div className='home__player'>
 
         <div className="input__container">
           <input type="text" placeholder="Search" />

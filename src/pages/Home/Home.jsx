@@ -296,7 +296,7 @@ const Home = () => {
                   <span>Creators</span>
                 </Link>
 
-                <Link to='/' className='btn btnBorder'>
+                <Link to='/music-player' className='btn btnBorder'>
                   <span>Play</span>
                 </Link>
               </div>

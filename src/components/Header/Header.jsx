@@ -85,7 +85,7 @@ const Header = () => {
                             <Link to='/pass' className='btn btnPrimaryLink'>Creator Pass</Link>
                         </li>
                         <li className="menuItem">
-                            <Link to='/' className='btn disabledLink'>Play</Link>
+                            <Link to='/music-player' className='btn btnSecondaryLink'>Play</Link>
                         </li>
                     </ul>
                 </nav>
